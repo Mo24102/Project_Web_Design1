@@ -53,7 +53,7 @@ namespace MyProject.Controllers
         [HttpGet]
         public async Task<IActionResult> Edit(int id)
         {
-            var st = await dbcontext.students.FirstOrDefaultAsync(kamal => kamal.Id == id);
+            var st = await dbcontext.students.FirstOrDefaultAsync(Name => Name.Id == id);
             return View(st);
         }
         [HttpPost]
